@@ -95,6 +95,7 @@ enchant.Class.create = function(superclass, definition) {
             return new Constructor();
         }
     };
+
     Constructor.prototype = Object.create(superclass.prototype, definition);
     Constructor.prototype.constructor = Constructor;
     if (Constructor.prototype.initialize == null) {

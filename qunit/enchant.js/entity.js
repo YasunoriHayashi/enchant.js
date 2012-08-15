@@ -6,7 +6,6 @@ function findElementWithId(id) {
 	return document.getElementById(id);
 }
 
-
 module('Entity', {
 	setup: function () {
 		enchant();
@@ -17,7 +16,7 @@ module('Entity', {
 	}
 });
 
-
+/**
 test('Entity.className', function () {
 	var label = new Label();
 	label.className = 'myClassName';
@@ -37,6 +36,8 @@ test('Entity.id', function () {
 	enchant.Game.instance.rootScene.addChild(label);
 	ok(findElementWithId('myId') !== null);
 });
+ */
+
 
 /**
  * @see https://github.com/wise9/enchant.js/issues/14

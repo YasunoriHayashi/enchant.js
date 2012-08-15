@@ -2,15 +2,15 @@
     /**
      * @scope enchant.CanvasGroup
      */
-    enchant.CanvasGroup = enchant.Class.create(enchant.Group, {
+    enchant.CanvasGroup = enchant.Class.create(enchant.DOMGroup, {
         initialize: function() {
             var game = enchant.Game.instance;
             var that = this;
-            enchant.Group.call(this);
+            enchant.DOMGroup.call(this);
             this._dirty = false;
             this._rotation = 0;
             this._cvsCache = {};
-            this._cvsCache.matrix = [ 1, 0, 0, 1, 0, 0];
+            this._cvsCache.matrix = [1, 0, 0, 1, 0, 0];
             this._cvsCache.detectColor = '#000000';
             this.width = game.width;
             this.height = game.height;

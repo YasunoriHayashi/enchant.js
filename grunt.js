@@ -66,9 +66,11 @@ module.exports = function(grunt) {
                     'dev/src/Sprite.js',
                     'dev/src/Label.js',
                     'dev/src/Map.js',
-                    'dev/src/CanvasGroup.js',
                     'dev/src/DOMGroup.js',
+                    'dev/src/CanvasGroup.js',
                     'dev/src/Group.js',
+                    'dev/src/DOMScene.js',
+                    'dev/src/CanvasScene.js',
                     'dev/src/Scene.js',
                     'dev/src/Surface.js',
                     'dev/src/Sound.js'
@@ -83,7 +85,7 @@ module.exports = function(grunt) {
             }
         },
         watch: {
-            files: '<config:concat.dist.src>',
+            files: 'dev/src/*.js',
             tasks: 'concat min'
         },
         jshint: {
@@ -116,5 +118,5 @@ module.exports = function(grunt) {
     });
 
     // Default task.
-    grunt.registerTask('default', 'lint qunit concat min exec:lang');
+    grunt.registerTask('default', 'lint concat min qunit exec:lang');
 };

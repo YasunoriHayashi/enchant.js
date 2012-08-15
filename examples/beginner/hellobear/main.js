@@ -28,7 +28,7 @@ window.onload = function(){
      * Game オブジェクトを作成する。
      * 画面の大きさは 320ピクセル x 320ピクセル に設定する。
      */
-    var game = new Game(320, 320);
+    game = new Game(320, 320);
 
     /**
      * Game.fps
