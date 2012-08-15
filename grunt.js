@@ -66,9 +66,9 @@ module.exports = function(grunt) {
                     'dev/src/Sprite.js',
                     'dev/src/Label.js',
                     'dev/src/Map.js',
-                    'dev/src/Group.js',
-                    'dev/src/RGroup.js',
                     'dev/src/CanvasGroup.js',
+                    'dev/src/DOMGroup.js',
+                    'dev/src/Group.js',
                     'dev/src/Scene.js',
                     'dev/src/Surface.js',
                     'dev/src/Sound.js'
