@@ -3,15 +3,27 @@
      * @scope enchant.CanvasGroup
      */
     enchant.CanvasGroup = enchant.Class.create(enchant.DOMGroup, {
+        /**
+         [lang:ja]
+         * 子を Canvas を用いた描画に切り替えるクラス
+         * @constructor
+         [/lang]
+         [lang:en]
+         *
+         * @constructor
+         [/lang]
+         */
         initialize: function() {
             var game = enchant.Game.instance;
             var that = this;
             enchant.DOMGroup.call(this);
             this._dirty = false;
             this._rotation = 0;
+
             this._cvsCache = {};
             this._cvsCache.matrix = [1, 0, 0, 1, 0, 0];
             this._cvsCache.detectColor = '#000000';
+
             this.width = game.width;
             this.height = game.height;
 
@@ -19,6 +31,7 @@
                 enchant.Event.ADDED_TO_SCENE,
                 enchant.Event.REMOVED_FROM_SCENE
             ];
+
             sceneEvents.forEach(function(event) {
                 this.addEventListener(event, function(e) {
                     this.childNodes.forEach(function(child) {
